@@ -29,7 +29,7 @@ export default class BookingsController {
    *
    */
 
-  public async index({ request, response }: HttpContextContract) {
+  public async index({ response }: HttpContextContract) {
     const getBooking = await Booking.query()
       .select("id", "field_id", "play_date_start", "play_date_end", "user_id")
       .preload("fields", (query) => {
