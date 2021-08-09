@@ -25,7 +25,7 @@
       - Authentication
     summary: Login Account User / Owner / Admin
     requestBody:
-      reuired: true
+      required: true
       content:
         application/x-www-form-urlencoded:
           schema:
@@ -51,13 +51,13 @@
             required:
               - email
               - password
-      responses:
-        '200':
-          description: 'Login Success'
-        '400':
-          description: 'Login Failed, Please Verify OTP'
-        '401':
-          description: 'Email / Password Not Found'
+    responses:
+      '200':
+        description: 'Login Success'
+      '400':
+        description: 'Login Failed, Please Verify OTP'
+      '401':
+        description: 'Email / Password Not Found'
 
 /api/v1/logout:
   post:
@@ -78,7 +78,7 @@
       - Authentication
     summary: OTP Confirmation
     requestBody:
-      reuired: true
+      required: true
       content:
         application/x-www-form-urlencoded:
           schema:
