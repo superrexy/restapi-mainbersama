@@ -23,7 +23,7 @@
   post:
     tags:
       - Authentication
-    summary: Login Account User / Owner / Admin
+    summary: Login Account User / Owner
     requestBody:
       required: true
       content:
