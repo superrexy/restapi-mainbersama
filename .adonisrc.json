@@ -32,10 +32,12 @@
     "@adonisjs/repl"
   ],
   "metaFiles": [
+    ".env",
+    "docs",
+    ".adonisrc.json",
     {
       "pattern": "resources/views/**/*.edge",
-      "reloadServer": false,
-      "docs": "docs/"
+      "reloadServer": false
     }
   ]
 }
