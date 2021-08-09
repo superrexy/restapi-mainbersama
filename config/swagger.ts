@@ -5,7 +5,7 @@ export default {
 	uiUrl: 'docs', // url path to swaggerUI
 	specEnabled: true, //disable or enable swagger.json route
 	specUrl: '/swagger.json',
-  validatorURL: null,
+  validatorUrl: null,
 	middleware: [], // middlewares array, for protect your swagger docs and spec endpoints
 
 	options: {
@@ -30,7 +30,8 @@ export default {
 			'docs/swagger/**/*.yml',
 			'start/routes.ts'
 		],
-		basePath: '/'
+		basePath: '/',
+    validatorUrl: null,
 	},
 	mode: 'RUNTIME',
   specFilePath: 'docs/swagger.json'

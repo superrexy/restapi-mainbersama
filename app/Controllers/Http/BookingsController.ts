@@ -75,10 +75,10 @@ export default class BookingsController {
    *          content:
    *              application/x-www-form-urlencoded:
    *                  schema:
-   *                      $ref: '#definitions/Booking'
+   *                      $ref: '#/definitions/Booking'
    *              application/json:
    *                  schema:
-   *                      $ref: '#definitions/Booking'
+   *                      $ref: '#/definitions/Booking'
    *
    *      responses:
    *          200:
