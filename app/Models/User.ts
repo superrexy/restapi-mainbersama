@@ -23,17 +23,14 @@ export default class User extends BaseModel {
    *            type: string
    *          email:
    *            type: string
-   *            format: email
    *          password:
    *            type: string
    *          role:
    *            type: string
-   *            enum: ['owner', 'admin', 'user']
    *      required:
    *        - name
    *        - email
    *        - password
-   *        - role
    */
   @column({ isPrimary: true })
   public id: number

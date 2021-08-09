@@ -13,11 +13,9 @@ export default class Booking extends BaseModel {
    *        field_id:
    *          type: number
    *        play_date_start:
-   *          type: string
-   *          format: date-time
+   *          type: datetime
    *        play_date_end:
-   *          type: enum
-   *          format: date-time
+   *          type: datetime
    *      required:
    *        - field_id
    *        - play_date_start

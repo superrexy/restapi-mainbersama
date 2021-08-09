@@ -13,7 +13,6 @@ export default class Field extends BaseModel {
    *          type: string
    *        type:
    *          type: enum
-   *          enum: ['soccer', 'minisoccer', 'futsal', 'basketball', 'volleyball']
    *      required:
    *        - name
    *        - type
