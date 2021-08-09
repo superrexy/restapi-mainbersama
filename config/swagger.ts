@@ -11,10 +11,12 @@ export default {
 	options: {
 		definition: {
 			openapi: '3.0.0',
+      validatorUrl: null,
 			info: {
 				title: 'Main Bersama',
 				version: '1.0.0',
-				description: 'RestAPI Main Bersama by Bintang Rezeka Ramadani'
+				description: 'RestAPI Main Bersama by Bintang Rezeka Ramadani',
+        validatorUrl: null,
 			},
       components: {
         securitySchemes: {
@@ -23,6 +25,7 @@ export default {
             scheme: 'bearer'
           },
         },
+        validatorUrl: null,
       },
 		},
 		apis: [
