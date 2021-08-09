@@ -76,10 +76,10 @@ export default class FieldsController {
    *          content:
    *              application/x-www-form-urlencoded:
    *                  schema:
-   *                      $ref: '#definitions/Field'
+   *                      $ref: '#/definitions/Field'
    *              application/json:
    *                  schema:
-   *                      $ref: '#definitions/Field'
+   *                      $ref: '#/definitions/Field'
    *
    *      responses:
    *          200:
@@ -141,10 +141,10 @@ export default class FieldsController {
    *          content:
    *              application/x-www-form-urlencoded:
    *                  schema:
-   *                      $ref: '#definitions/Field'
+   *                      $ref: '#/definitions/Field'
    *              application/json:
    *                  schema:
-   *                      $ref: '#definitions/Field'
+   *                      $ref: '#/definitions/Field'
    *
    *      responses:
    *          200:

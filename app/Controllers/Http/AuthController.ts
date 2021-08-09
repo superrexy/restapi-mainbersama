@@ -22,10 +22,10 @@ export default class AuthController {
    *          content:
    *              application/x-www-form-urlencoded:
    *                  schema:
-   *                      $ref: '#definitions/User'
+   *                      $ref: '#/definitions/User'
    *              application/json:
    *                  schema:
-   *                      $ref: '#definitions/User'
+   *                      $ref: '#/definitions/User'
    *      responses:
    *          201:
    *              description: 'register success, please verify your otp code'
@@ -51,7 +51,7 @@ export default class AuthController {
 
     await Mail.send((message) => {
       message
-      .from('admin@mainbersama.com')
+      .from('adonis.demo@sanberdev.com')
       .to(validate.email)
       .subject('Verify User Register')
       .htmlView('emails/otp', { otp })
