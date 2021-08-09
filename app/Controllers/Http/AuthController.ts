@@ -16,7 +16,7 @@ export default class AuthController {
    *      tags:
    *        - Authentication
    *      description: Register New User and Send OTP to Email
-   *      summary: Create New User
+   *      summary: Register New User
    *      requestBody:
    *          required: true
    *          content:
@@ -78,11 +78,10 @@ export default class AuthController {
    *                  schema:
    *                     type: object
    *                     properties:
-   *                          email:
-   *                            type: string
-   *                            format: email
-   *                          password:
-   *                            type: string
+   *                         email:
+   *                           type: string
+   *                         password:
+   *                           type: string
    *                     required:
    *                        - email
    *                        - password
@@ -90,11 +89,10 @@ export default class AuthController {
    *                  schema:
    *                     type: object
    *                     properties:
-   *                          email:
-   *                            type: string
-   *                            format: email
-   *                          password:
-   *                            type: string
+   *                         email:
+   *                           type: string
+   *                         password:
+   *                           type: string
    *                     required:
    *                        - email
    *                        - password
@@ -162,11 +160,10 @@ export default class AuthController {
    *                  schema:
    *                     type: object
    *                     properties:
-   *                          email:
-   *                            type: string
-   *                            format: email
-   *                          otp_code:
-   *                            type: string
+   *                         email:
+   *                           type: string
+   *                         otp_code:
+   *                           type: string
    *                     required:
    *                        - email
    *                        - otp_code
@@ -174,11 +171,10 @@ export default class AuthController {
    *                  schema:
    *                     type: object
    *                     properties:
-   *                          email:
-   *                            type: string
-   *                            format: email
-   *                          otp_code:
-   *                            type: string
+   *                         email:
+   *                           type: string
+   *                         otp_code:
+   *                           type: string
    *                     required:
    *                        - email
    *                        - otp_code

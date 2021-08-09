@@ -46,10 +46,10 @@ export default class VenuesController {
    *          content:
    *              application/x-www-form-urlencoded:
    *                  schema:
-   *                      $ref: '#definitions/Venue'
+   *                      $ref: '#/definitions/Venue'
    *              application/json:
    *                  schema:
-   *                      $ref: '#definitions/Venue'
+   *                      $ref: '#/definitions/Venue'
    *      responses:
    *          200:
    *              description: 'Success'
@@ -138,10 +138,10 @@ export default class VenuesController {
    *          content:
    *              application/x-www-form-urlencoded:
    *                  schema:
-   *                      $ref: '#definitions/Venue'
+   *                      $ref: '#/definitions/Venue'
    *              application/json:
    *                  schema:
-   *                      $ref: '#definitions/Venue'
+   *                      $ref: '#/definitions/Venue'
    *      responses:
    *          200:
    *              description: 'Success'
