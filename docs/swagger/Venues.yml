@@ -110,7 +110,7 @@
         description: Venue ID
     tags:
       - Venues
-    summary: Show Fields Venue
+    summary: Show Venue By Id
     responses:
       '200':
         description: 'Success'
