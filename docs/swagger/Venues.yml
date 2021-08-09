@@ -82,10 +82,34 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#/components/schemas/Booking'
+            type: object
+            properties:
+              id_field:
+                type: string
+              play_date_start:
+                type: string
+                format: date-time
+              play_date_end:
+                type: string
+                format: date-time
+            required:
+              - name
+              - address
+              - phone
         application/json:
           schema:
-            $ref: '#/components/schemas/Booking'
+            type: object
+            properties:
+              name:
+                type: string
+              address:
+                type: string
+              phone:
+                type: string
+            required:
+              - name
+              - address
+              - phone
     responses:
       '200':
         description: 'Success'
