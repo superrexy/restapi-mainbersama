@@ -8,10 +8,34 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#/components/schemas/User'
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
+                format: email
+              password:
+                type: string
+            required:
+              - name
+              - email
+              - password
         application/json:
           schema:
-            $ref: '#/components/schemas/User'
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
+                format: email
+              password:
+                type: string
+            required:
+              - name
+              - email
+              - password
     responses:
       '201':
         description: 'register success, please verify your otp code'

@@ -42,10 +42,26 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#/components/schemas/Fields'
+            type: object
+            properties:
+              name:
+                type: string
+              type:
+                type: enum
+            required:
+              - name
+              - type
         application/json:
           schema:
-            $ref: '#/components/schemas/Fields'
+            type: object
+            properties:
+              name:
+                type: string
+              type:
+                type: enum
+            required:
+              - name
+              - type
     responses:
       '200':
         description: 'Success'
@@ -84,10 +100,26 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#/components/schemas/Fields'
+            type: object
+            properties:
+              name:
+                type: string
+              type:
+                type: enum
+            required:
+              - name
+              - type
         application/json:
           schema:
-            $ref: '#/components/schemas/Fields'
+            type: object
+            properties:
+              name:
+                type: string
+              type:
+                type: enum
+            required:
+              - name
+              - type
     responses:
       '200':
         description: 'Success'
