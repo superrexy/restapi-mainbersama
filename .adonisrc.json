@@ -34,7 +34,8 @@
   "metaFiles": [
     {
       "pattern": "resources/views/**/*.edge",
-      "reloadServer": false
+      "reloadServer": false,
+      "docs": "docs/"
     }
   ]
 }

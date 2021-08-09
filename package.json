@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node ace build --prod",
     "start": "node ace serve --watch",
-    "start:prod": "node ./build/server.js"
+    "start:prod": "node ./build/server.js",
+    "postbuild": "node ace swagger:generate && cp -a docs/ build/docs"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^5.3.5",

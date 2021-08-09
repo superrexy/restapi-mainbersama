@@ -20,7 +20,7 @@ const databaseConfig: DatabaseConfig = {
   | file.
   |
   */
-  connection: Application.inDev ? 'mysql' : 'pg',
+  connection: Application.inDev ? 'pg' : 'mysql',
 
   connections: {
     /*
