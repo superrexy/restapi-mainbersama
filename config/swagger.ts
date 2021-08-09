@@ -5,18 +5,16 @@ export default {
 	uiUrl: 'docs', // url path to swaggerUI
 	specEnabled: true, //disable or enable swagger.json route
 	specUrl: '/swagger.json',
-  validatorUrl: null,
+  validatorUrl: false,
 	middleware: [], // middlewares array, for protect your swagger docs and spec endpoints
 
 	options: {
 		definition: {
 			openapi: '3.0.0',
-      validatorUrl: null,
 			info: {
 				title: 'Main Bersama',
 				version: '1.0.0',
 				description: 'RestAPI Main Bersama by Bintang Rezeka Ramadani',
-        validatorUrl: null,
 			},
       components: {
         securitySchemes: {
@@ -25,7 +23,6 @@ export default {
             scheme: 'bearer'
           },
         },
-        validatorUrl: null,
       },
 		},
 		apis: [
@@ -34,7 +31,7 @@ export default {
 			'start/routes.ts'
 		],
 		basePath: '/',
-    validatorUrl: null,
+    validatorUrl: false,
 	},
 	mode: 'PRODUCTION',
   specFilePath: 'docs/swagger.json'
