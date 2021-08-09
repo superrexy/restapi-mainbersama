@@ -47,7 +47,7 @@
               name:
                 type: string
               type:
-                type: enum
+                type: string
             required:
               - name
               - type
@@ -58,7 +58,7 @@
               name:
                 type: string
               type:
-                type: enum
+                type: string
             required:
               - name
               - type
@@ -105,7 +105,7 @@
               name:
                 type: string
               type:
-                type: enum
+                type: string
             required:
               - name
               - type
@@ -116,7 +116,7 @@
               name:
                 type: string
               type:
-                type: enum
+                type: string
             required:
               - name
               - type
