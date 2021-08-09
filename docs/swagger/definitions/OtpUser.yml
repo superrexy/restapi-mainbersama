@@ -1,11 +1,12 @@
-definitions:
-  OtpUser:
-    type: object
-    properties:
-      user_id:
-        type: number
-      otp:
-        type: string
-    required:
-      - user_id
-      - otp
+components:
+  schemas:
+    OtpUser:
+      type: object
+      properties:
+        user_id:
+          type: number
+        otp:
+          type: string
+      required:
+        - user_id
+        - otp

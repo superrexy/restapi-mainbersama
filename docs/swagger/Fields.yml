@@ -42,10 +42,10 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#definitions/Fields'
+            $ref: '#/definitions/Fields'
         application/json:
           schema:
-            $ref: '#definitions/Fields'
+            $ref: '#/definitions/Fields'
     responses:
       '200':
         description: 'Success'
@@ -84,10 +84,10 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#definitions/Fields'
+            $ref: '#/definitions/Fields'
         application/json:
           schema:
-            $ref: '#definitions/Fields'
+            $ref: '#/definitions/Fields'
     responses:
       '200':
         description: 'Success'

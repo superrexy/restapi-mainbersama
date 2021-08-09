@@ -1,16 +1,17 @@
-definitions:
-  User:
-    type: object
-    properties:
-      name:
-        type: string
-      email:
-        type: string
-      password:
-        type: string
-      role:
-        type: string
-    required:
-      - name
-      - email
-      - password
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        role:
+          type: string
+      required:
+        - name
+        - email
+        - password

@@ -26,10 +26,10 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#definitions/Venue'
+            $ref: '#/definitions/Venue'
         application/json:
           schema:
-            $ref: '#definitions/Venue'
+            $ref: '#/definitions/Venue'
     responses:
       '200':
         description: 'Success'
@@ -60,10 +60,10 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#definitions/Booking'
+            $ref: '#/definitions/Booking'
         application/json:
           schema:
-            $ref: '#definitions/Booking'
+            $ref: '#/definitions/Booking'
     responses:
       '200':
         description: 'Success'
@@ -118,10 +118,10 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#definitions/Venue'
+            $ref: '#/definitions/Venue'
         application/json:
           schema:
-            $ref: '#definitions/Venue'
+            $ref: '#/definitions/Venue'
     responses:
       '200':
         description: 'Success'

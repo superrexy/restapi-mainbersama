@@ -8,10 +8,10 @@
       content:
         application/x-www-form-urlencoded:
           schema:
-            $ref: '#definitions/User'
+            $ref: '#/definitions/User'
         application/json:
           schema:
-            $ref: '#definitions/User'
+            $ref: '#/definitions/User'
     responses:
       '201':
         description: 'register success, please verify your otp code'

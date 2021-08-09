@@ -1,11 +1,12 @@
-definitions:
-  Field:
-    type: object
-    properties:
-      name:
-        type: string
-      type:
-        type: enum
-    required:
-      - name
-      - type
+components:
+  schemas:
+    Field:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: enum
+      required:
+        - name
+        - type
