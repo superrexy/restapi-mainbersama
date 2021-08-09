@@ -1,0 +1,130 @@
+/api/v1/venues/{id_venue}/fields:
+  get:
+    security:
+    - bearerAuth: []
+    parameters:
+      - in: path
+        name: id_venue
+        required: true
+        schema:
+          type: number
+          minimum: 1
+        description: Venues ID
+    tags:
+      - Fields
+    summary: Get All Venue Fields Data
+    responses:
+      '200':
+        description: 'Success'
+      '400':
+        description: 'Failed'
+      '401':
+        description: 'Unauthorized'
+      '500':
+        description: 'Internal Server Error'
+
+  post:
+    security:
+    - bearerAuth: []
+    parameters:
+      - in: path
+        name: id_venue
+        required: true
+        schema:
+          type: number
+          minimum: 1
+        description: Venues ID
+    tags:
+      - Fields
+    summary: Create New Field
+    requestBody:
+      required: true
+      content:
+        application/x-www-form-urlencoded:
+          schema:
+            $ref: '#definitions/Fields'
+        application/json:
+          schema:
+            $ref: '#definitions/Fields'
+    responses:
+      '200':
+        description: 'Success'
+      '400':
+        description: 'Failed'
+      '401':
+        description: 'Unauthorized'
+      '500':
+        description: 'Internal Server Error'
+
+/api/v1/venues/{id_venue}/fields/{id_field}:
+  put:
+    security:
+    - bearerAuth: []
+    parameters:
+      - in: path
+        name: id_venue
+        required: true
+        schema:
+          type: number
+          minimum: 1
+        description: Venue ID
+
+      - in: path
+        name: id_field
+        required: true
+        schema:
+          type: number
+          minimum: 1
+        description: Field ID
+    tags:
+      - Fields
+    summary: Update Field By Id
+    requestBody:
+      required: true
+      content:
+        application/x-www-form-urlencoded:
+          schema:
+            $ref: '#definitions/Fields'
+        application/json:
+          schema:
+            $ref: '#definitions/Fields'
+    responses:
+      '200':
+        description: 'Success'
+      '400':
+        description: 'Failed'
+      '401':
+        description: 'Unauthorized'
+      '500':
+        description: 'Internal Server Error'
+
+  delete:
+    security:
+    - bearerAuth: []
+    parameters:
+      - in: path
+        name: id_venue
+        required: true
+        schema:
+          type: number
+          minimum: 1
+        description: Venue ID
+      - in: path
+        name: id_field
+        required: true
+        schema:
+          type: number
+          minimum: 1
+        description: Field ID
+    tags:
+      - Fields
+    summary: Delete Venue By Id
+    responses:
+      '200':
+        description: 'Success'
+      '400':
+        description: 'Failed'
+      '401':
+        description: 'Unauthorized'
+      '500':
+        description: 'Internal Server Error'

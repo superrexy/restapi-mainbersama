@@ -1,0 +1,11 @@
+definitions:
+  OtpUser:
+    type: object
+    properties:
+      user_id:
+        type: number
+      otp:
+        type: string
+    required:
+      - user_id
+      - otp

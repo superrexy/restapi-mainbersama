@@ -3,21 +3,6 @@ import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
 import Booking from './Booking'
 
 export default class Field extends BaseModel {
-    /**
-   * @swagger
-   * definitions:
-   *    Field:
-   *      type: object
-   *      properties:
-   *        name:
-   *          type: string
-   *        type:
-   *          type: enum
-   *      required:
-   *        - name
-   *        - type
-   */
-
   @column({ isPrimary: true })
   public id: number
 

@@ -15,16 +15,16 @@ export default {
 				title: 'Main Bersama',
 				version: '1.0.0',
 				description: 'RestAPI Main Bersama by Bintang Rezeka Ramadani'
-			}
-		},
-    components: {
-      securitySchemes: {
-        bearerAuth:{
-          type: 'http',
-          scheme: 'bearer'
+			},
+      components: {
+        securitySchemes: {
+          bearerAuth: {
+            type: 'http',
+            scheme: 'bearer'
+          },
         },
       },
-    },
+		},
 		apis: [
 			'app/**/*.ts',
 			'docs/swagger/**/*.yml',
@@ -33,6 +33,6 @@ export default {
 		basePath: '/',
     validatorUrl: null,
 	},
-	mode: 'RUNTIME',
+	mode: 'PRODUCTION',
   specFilePath: 'docs/swagger.json'
 } as SwaggerConfig

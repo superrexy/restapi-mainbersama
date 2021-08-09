@@ -4,24 +4,6 @@ import Field from './Field'
 import User from './User'
 
 export default class Booking extends BaseModel {
-    /**
-   * @swagger
-   * definitions:
-   *    Booking:
-   *      type: object
-   *      properties:
-   *        field_id:
-   *          type: number
-   *        play_date_start:
-   *          type: datetime
-   *        play_date_end:
-   *          type: datetime
-   *      required:
-   *        - field_id
-   *        - play_date_start
-   *        - play_date_end
-   */
-
   @column({ isPrimary: true })
   public id: number
 

@@ -8,32 +8,6 @@ import OtpUser from 'App/Models/OtpUser';
 
 
 export default class AuthController {
-  /**
-   * @swagger
-   * paths:
-   *  /api/v1/register:
-   *    post:
-   *      tags:
-   *        - Authentication
-   *      description: Register New User and Send OTP to Email
-   *      summary: Register New User
-   *      requestBody:
-   *          required: true
-   *          content:
-   *              application/x-www-form-urlencoded:
-   *                  schema:
-   *                      $ref: '#/definitions/User'
-   *              application/json:
-   *                  schema:
-   *                      $ref: '#/definitions/User'
-   *      responses:
-   *          201:
-   *              description: 'register success, please verify your otp code'
-   *          422:
-   *              description: 'validation failed'
-   *
-   */
-
   public async register({ request, response }: HttpContextContract){
     const schemaRegister = schema.create({
       name: schema.string({}, [rules.required()]),
@@ -62,48 +36,6 @@ export default class AuthController {
     return response.created({message: 'register success, please verify your otp code'});
   }
 
-  /**
-   * @swagger
-   * paths:
-   *  /api/v1/login:
-   *    post:
-   *      tags:
-   *        - Authentication
-   *      description: Returning Bearer Token and Validate OTP
-   *      summary: Login User Account
-   *      requestBody:
-   *          required: true
-   *          content:
-   *              application/x-www-form-urlencoded:
-   *                  schema:
-   *                     type: object
-   *                     properties:
-   *                         email:
-   *                           type: string
-   *                         password:
-   *                           type: string
-   *                     required:
-   *                        - email
-   *                        - password
-   *              application/json:
-   *                  schema:
-   *                     type: object
-   *                     properties:
-   *                         email:
-   *                           type: string
-   *                         password:
-   *                           type: string
-   *                     required:
-   *                        - email
-   *                        - password
-   *      responses:
-   *          200:
-   *              description: 'login success'
-   *          400:
-   *              description: 'email account not found'
-   *
-   */
-
   public async login({ request, response, auth }: HttpContextContract){
     const schemaLogin = schema.create({
       email: schema.string({}, [rules.required(), rules.email()]),
@@ -120,71 +52,10 @@ export default class AuthController {
     }
   }
 
-  /**
-   * @swagger
-   * paths:
-   *  /api/v1/logout:
-   *    post:
-   *      security:
-   *         - bearerAuth: []
-   *      tags:
-   *        - Authentication
-   *      description: Revoke Bearer Token
-   *      summary: Logout User Account
-   *      responses:
-   *          200:
-   *              description: 'Revoke Token Success'
-   *          401:
-   *              description: 'Unauthorized access'
-   *
-   */
-
   public async logout({ response, auth }: HttpContextContract){
     await auth.use('api').revoke()
     return response.ok({ revoke: true })
   }
-
-  /**
-   * @swagger
-   * paths:
-   *  /api/v1/otp-confirmation:
-   *    post:
-   *      tags:
-   *        - Authentication
-   *      description: Set at Users Table isVerified to True
-   *      summary: Verification OTP For New Users
-   *      requestBody:
-   *          required: true
-   *          content:
-   *              application/x-www-form-urlencoded:
-   *                  schema:
-   *                     type: object
-   *                     properties:
-   *                         email:
-   *                           type: string
-   *                         otp_code:
-   *                           type: string
-   *                     required:
-   *                        - email
-   *                        - otp_code
-   *              application/json:
-   *                  schema:
-   *                     type: object
-   *                     properties:
-   *                         email:
-   *                           type: string
-   *                         otp_code:
-   *                           type: string
-   *                     required:
-   *                        - email
-   *                        - otp_code
-   *      responses:
-   *          200:
-   *              description: 'OTP success confirmed'
-   *          400:
-   *              description: 'Email Tidak Ditemukan / OTP Salah Tidak Ditemukan'
-   *
-   */
 
   public async otpConfirmation({ request, response }: HttpContextContract){
     const schemaotp = schema.create({
